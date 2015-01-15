@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <package>
   <name>uwsim_osgocean</name>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <description>The OSG Ocean library adapted to UWSim. See https://code.google.com/p/osgocean</description>
 
-  <maintainer email="mprats@willowgarage.com">Mario Prats</maintainer>
+  <maintainer email="marioprats@gmail.com">Mario Prats</maintainer>
+  <maintainer email="perezsolerj@gmail.com">Javier Perez</maintainer>
   <license>LGPL</license>
 
   <buildtool_depend>cmake</buildtool_depend>
