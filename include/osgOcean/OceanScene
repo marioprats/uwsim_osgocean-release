@@ -108,6 +108,7 @@ namespace osgOcean
         unsigned int _surfaceMask;
         unsigned int _normalSceneMask;
         unsigned int _siltMask;
+        unsigned int _ARMask;
 
         unsigned int _lightID;
 
@@ -612,6 +613,11 @@ namespace osgOcean
         /// Get the node mask for the scene.
         inline unsigned int getNormalSceneMask( void ) const{
             return _normalSceneMask;
+        }
+
+        /// Get the node mask for the AR objects.
+        inline unsigned int getARMask( void ) const{
+            return _ARMask;
         }
 
         /// Set the ID of the light source that should be used to light the ocean.
