@@ -174,6 +174,7 @@ OceanScene::OceanScene( void )
     ,_surfaceMask                ( 0x8 )  // 8
     ,_siltMask                   ( 0x10 ) // 16
     ,_heightmapMask              ( 0x20 ) // 32
+    ,_ARMask                     ( 0x40 ) // 64
     ,_lightID                    ( 0 )
     ,_dofNear                    ( 0.f )
     ,_dofFar                     ( 160.f )
@@ -249,6 +250,7 @@ OceanScene::OceanScene( OceanTechnique* technique )
     ,_surfaceMask                ( 0x8 )
     ,_siltMask                   ( 0x10 )
     ,_heightmapMask              ( 0x20 ) 
+    ,_ARMask                     ( 0x40 ) // 64
     ,_lightID                    ( 0 )
     ,_dofNear                    ( 0.f )
     ,_dofFar                     ( 160.f )
@@ -326,6 +328,7 @@ OceanScene::OceanScene( const OceanScene& copy, const osg::CopyOp& copyop )
     ,_surfaceMask                ( copy._surfaceMask )
     ,_normalSceneMask            ( copy._normalSceneMask )
     ,_heightmapMask              ( copy._heightmapMask )
+    ,_ARMask                     ( copy._ARMask )
     ,_godrayPreRender            ( copy._godrayPreRender )
     ,_godrayPostRender           ( copy._godrayPostRender )
     ,_godrays                    ( copy._godrays )
@@ -651,7 +654,7 @@ void OceanScene::ViewData::init( OceanScene *oceanScene, osgUtil::CullVisitor * 
         _reflectionCamera = _oceanScene->renderToTexturePass( reflectionTexture.get() );
         _reflectionCamera->setClearColor( osg::Vec4( 0.0, 0.0, 0.0, 0.0 ) );
         _reflectionCamera->setComputeNearFarMode( osg::Camera::DO_NOT_COMPUTE_NEAR_FAR );
-        _reflectionCamera->setCullMask( _oceanScene->_reflectionSceneMask );
+        _reflectionCamera->setCullMask( _oceanScene->_reflectionSceneMask | _oceanScene->_ARMask);
         _reflectionCamera->setCullCallback( new CameraCullCallback(_oceanScene.get()) );
         _reflectionCamera->getOrCreateStateSet()->setMode( GL_CLIP_PLANE0+0, osg::StateAttribute::ON );
         _reflectionCamera->getOrCreateStateSet()->setMode( GL_CULL_FACE, osg::StateAttribute::OFF | osg::StateAttribute::OVERRIDE );
@@ -674,7 +677,7 @@ void OceanScene::ViewData::init( OceanScene *oceanScene, osgUtil::CullVisitor * 
         _refractionCamera->setClearDepth( 1.0 );
         _refractionCamera->setClearColor( osg::Vec4( 0.0, 0.0, 0.0, 0.0 ) );
         _refractionCamera->setComputeNearFarMode( osg::Camera::DO_NOT_COMPUTE_NEAR_FAR );
-        _refractionCamera->setCullMask( _oceanScene->_refractionSceneMask );
+        _refractionCamera->setCullMask( _oceanScene->_refractionSceneMask | _oceanScene->_ARMask );
         _refractionCamera->setCullCallback( new CameraCullCallback(_oceanScene.get()) );
 
         _surfaceStateSet->setTextureAttributeAndModes( _oceanScene->_refractionUnit, refractionTexture, osg::StateAttribute::ON );
@@ -1043,7 +1046,7 @@ void OceanScene::cull(osgUtil::CullVisitor& cv, bool eyeAboveWater, bool surface
     }
 
     // render rest of scene
-    cv.setTraversalMask( mask & _normalSceneMask );
+    cv.setTraversalMask( mask & _normalSceneMask | _ARMask);
     osg::Group::traverse(cv);
 
     // pop globalStateSet
