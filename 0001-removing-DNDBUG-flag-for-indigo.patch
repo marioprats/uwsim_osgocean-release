@@ -1,0 +1,26 @@
+From 891e595fd6aad94555ffe21a17b5141411d3462f Mon Sep 17 00:00:00 2001
+From: perezsolerj <perezsolerj@gmail.com>
+Date: Wed, 4 Feb 2015 18:33:34 +0100
+Subject: [PATCH] removing DNDBUG flag for indigo
+
+---
+ debian/rules.em | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/debian/rules.em b/debian/rules.em
+index 991c991..06777bd 100755
+--- a/debian/rules.em
++++ b/debian/rules.em
+@@ -15,9 +15,6 @@ export DH_OPTIONS=-v --buildsystem=cmake
+ #  https://code.ros.org/trac/ros/ticket/3842
+ export LDFLAGS=
+ export PKG_CONFIG_PATH=@(InstallationPrefix)/lib/pkgconfig
+-# Explicitly enable -DNDEBUG, see:
+-# 	https://github.com/ros-infrastructure/bloom/issues/327
+-export DEB_CXXFLAGS_MAINT_APPEND=-DNDEBUG
+ 
+ %:
+ 	dh  $@@
+-- 
+1.9.1
+
