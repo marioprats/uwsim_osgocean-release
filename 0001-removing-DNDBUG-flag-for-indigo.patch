@@ -1,10 +1,10 @@
-From 891e595fd6aad94555ffe21a17b5141411d3462f Mon Sep 17 00:00:00 2001
+From 55f67b1c1f58428b27f7eb93ec9e32465b9687b2 Mon Sep 17 00:00:00 2001
 From: perezsolerj <perezsolerj@gmail.com>
 Date: Wed, 4 Feb 2015 18:33:34 +0100
 Subject: [PATCH] removing DNDBUG flag for indigo
 
 ---
- debian/rules.em | 3 ---
+ debian/rules.em |    3 ---
  1 file changed, 3 deletions(-)
 
 diff --git a/debian/rules.em b/debian/rules.em
@@ -22,5 +22,5 @@ index 991c991..06777bd 100755
  %:
  	dh  $@@
 -- 
-1.9.1
+1.7.9.5
 
