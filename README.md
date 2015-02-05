@@ -1,3 +1,24 @@
+## uwsim_osgocean (indigo) - 1.0.3-7
+
+The packages in the `uwsim_osgocean` repository were released into the `indigo` distro by running `/usr/bin/bloom-release uwsim_osgocean --track indigo --rosdistro indigo` on `Thu, 05 Feb 2015 10:59:08 -0000`
+
+The `uwsim_osgocean` package was released.
+
+Version of package(s) in repository `uwsim_osgocean`:
+- upstream repository: https://github.com/uji-ros-pkg/uwsim_osgocean.git
+- release repository: https://github.com/uji-ros-pkg/uwsim_osgocean-release.git
+- rosdistro version: `1.0.3-5`
+- old version: `1.0.3-6`
+- new version: `1.0.3-7`
+
+Versions of tools used:
+- bloom version: `0.5.17`
+- catkin_pkg version: `0.2.6`
+- rosdep version: `0.11.1`
+- rosdistro version: `0.4.0`
+- vcstools version: `0.1.36`
+
+
 ## uwsim_osgocean (indigo) - 1.0.3-6
 
 The packages in the `uwsim_osgocean` repository were released into the `indigo` distro by running `/usr/bin/bloom-release uwsim_osgocean --track indigo --rosdistro indigo` on `Thu, 05 Feb 2015 10:50:53 -0000`
