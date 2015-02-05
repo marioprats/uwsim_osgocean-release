@@ -1,4 +1,4 @@
-From 55f67b1c1f58428b27f7eb93ec9e32465b9687b2 Mon Sep 17 00:00:00 2001
+From bf35348df829251dca430a5f419e8f6ba0068295 Mon Sep 17 00:00:00 2001
 From: perezsolerj <perezsolerj@gmail.com>
 Date: Wed, 4 Feb 2015 18:33:34 +0100
 Subject: [PATCH] removing DNDBUG flag for indigo
