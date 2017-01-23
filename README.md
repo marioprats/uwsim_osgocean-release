@@ -1,3 +1,26 @@
+## uwsim_osgocean (kinetic) - 1.0.3-0
+
+The packages in the `uwsim_osgocean` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release uwsim_osgocean --track kinetic --rosdistro kinetic --new-track` on `Mon, 23 Jan 2017 17:39:02 -0000`
+
+The `uwsim_osgocean` package was released.
+
+Version of package(s) in repository `uwsim_osgocean`:
+
+- upstream repository: https://github.com/uji-ros-pkg/uwsim_osgocean.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `1.0.3-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.23`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.5`
+- rosdistro version: `0.5.0`
+- vcstools version: `0.1.39`
+
+
 ## uwsim_osgocean (jade) - 1.0.3-0
 
 The packages in the `uwsim_osgocean` repository were released into the `jade` distro by running `/usr/bin/bloom-release uwsim_osgocean --track jade --rosdistro jade --new-track` on `Thu, 17 Sep 2015 23:42:46 -0000`
