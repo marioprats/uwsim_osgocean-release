@@ -1,3 +1,26 @@
+## uwsim_osgocean (melodic) - 1.0.4-1
+
+The packages in the `uwsim_osgocean` repository were released into the `melodic` distro by running `/usr/local/bin/bloom-release --rosdistro melodic --track melodic uwsim_osgocean --edit` on `Sun, 10 Nov 2019 19:50:31 -0000`
+
+The `uwsim_osgocean` package was released.
+
+Version of package(s) in repository `uwsim_osgocean`:
+
+- upstream repository: https://github.com/uji-ros-pkg/uwsim_osgocean.git
+- release repository: https://github.com/uji-ros-pkg/uwsim_osgocean-release.git
+- rosdistro version: `1.0.3-1`
+- old version: `1.0.3-1`
+- new version: `1.0.4-1`
+
+Versions of tools used:
+
+- bloom version: `0.8.0`
+- catkin_pkg version: `0.4.14`
+- rosdep version: `0.17.1`
+- rosdistro version: `0.7.5`
+- vcstools version: `0.1.40`
+
+
 ## uwsim_osgocean (melodic) - 1.0.3-1
 
 The packages in the `uwsim_osgocean` repository were released into the `melodic` distro by running `/usr/bin/bloom-release uwsim_osgocean --rosdistro melodic` on `Sat, 12 Oct 2019 07:23:53 -0000`
