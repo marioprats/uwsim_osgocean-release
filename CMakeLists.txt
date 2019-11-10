@@ -1,13 +1,12 @@
 # The name of our project is "osgOcean". CMakeLists files in this project can
 # refer to the root source directory of the project as ${osgOcean_SOURCE_DIR}
 # to the root binary directory of the project as ${osgOcean_BINARY_DIR}.
-
 cmake_minimum_required (VERSION 2.6 FATAL_ERROR)
 
 project (uwsim_osgocean)
 
-SET( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 SET( CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
+SET( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
 SET( CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 
 # Work around for building an xcode project. It seems XCode projects that
@@ -41,11 +40,11 @@ include_directories (${OSGUTIL_INCLUDE_DIR})
 find_package (osgText REQUIRED)
 include_directories (${OSGTEXT_INCLUDE_DIR})
 
-find_package (osgShadow REQUIRED)
-include_directories (${OSGSHADOW_INCLUDE_DIR})
-
 find_package (OpenThreads REQUIRED)
 include_directories(${OPENTHREADS_INCLUDE_DIR})
+
+find_package (osgShadow REQUIRED)
+include_directories (${OSGSHADOW_INCLUDE_DIR})
 
 IF (NOT WIN32)
   IF (NOT OSG_LIBRARY_DEBUG)
